@@ -1,0 +1,21 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. CalculoSalario.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 HorasTrabalhadas    PIC 9(3).
+01 TaxaHoraria         PIC 9(5)V99.
+01 Salario             PIC 9(7)V99.
+
+PROCEDURE DIVISION.
+    DISPLAY "Digite as horas trabalhadas: ".
+    ACCEPT HorasTrabalhadas.
+
+    DISPLAY "Digite a taxa horária: ".
+    ACCEPT TaxaHoraria.
+
+    COMPUTE Salario = HorasTrabalhadas * TaxaHoraria.
+
+    DISPLAY "O salário é: " Salario.
+
+    STOP RUN.
